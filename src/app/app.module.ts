@@ -12,7 +12,7 @@ import { RouterStoreModule, routerReducer } from '@ngrx/router-store';
 import { storeFreeze } from 'ngrx-store-freeze';
 
 import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application.state';
-import { storeDataReducer } from './store/store-data.reducer';
+import { storeStateReducer } from './store/store.reducer';
 import { uiStateReducer } from './store/ui.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,9 +28,9 @@ import { MessageSectionComponent } from './message-section/message-section.compo
 import { MessageListComponent } from './message-list/message-list.component';
 
 export const reducers = {
-  ui: uiStateReducer,
-  storeData: storeDataReducer,
-  router: routerReducer
+  uiState: uiStateReducer,
+  storeState: storeStateReducer,
+  routerState: routerReducer
 };
 
 const developmentReducers: ActionReducer<ApplicationState> = compose(storeFreeze, combineReducers)(reducers);

@@ -1,16 +1,16 @@
 import { RouterState } from '@ngrx/router-store';
 
-import { INITIAL_STORE_DATA_STATE, StoreDataState } from './store-data.state';
+import { INITIAL_STORE_STATE, StoreState } from './store.state';
 import { INITIAL_UI_STATE, UiState } from './ui.state';
 
 export interface ApplicationState {
-  routerState: RouterState;
   uiState: UiState;
-  storeDataState: StoreDataState;
+  storeState: StoreState;
+  routerState: RouterState;
 }
 
 export const INITIAL_APPLICATION_STATE: ApplicationState = {
-  routerState: { path: 'home' },
   uiState: INITIAL_UI_STATE,
-  storeDataState: INITIAL_STORE_DATA_STATE
+  storeState: INITIAL_STORE_STATE,
+  routerState: { path: 'home' },
 };
