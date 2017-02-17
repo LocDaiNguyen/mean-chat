@@ -1,4 +1,3 @@
-import { environment } from '../environments/environment.prod';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,10 +10,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { RouterStoreModule, routerReducer } from '@ngrx/router-store';
 import { storeFreeze } from 'ngrx-store-freeze';
 
-import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application.state';
-import { storeStateReducer } from './store/store.reducer';
-import { uiStateReducer } from './store/ui.reducer';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -26,6 +21,16 @@ import { ThreadSectionComponent } from './thread-section/thread-section.componen
 import { ThreadListComponent } from './thread-list/thread-list.component';
 import { MessageSectionComponent } from './message-section/message-section.component';
 import { MessageListComponent } from './message-list/message-list.component';
+
+
+
+
+
+import { environment } from '../environments/environment.prod';
+
+import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application.state';
+import { storeStateReducer } from './store/store.reducer';
+import { uiStateReducer } from './store/ui.reducer';
 
 export const reducers = {
   uiState: uiStateReducer,
@@ -43,6 +48,10 @@ export function storeReducer(state: ApplicationState, action: Action): Applicati
     return developmentReducers(state, action);
   }
 }
+
+
+
+
 
 @NgModule({
   declarations: [
