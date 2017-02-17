@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { TheadListComponent } from './thead-list.component';
+import { ThreadListComponent } from './thread-list.component';
 
-describe('TheadListComponent', () => {
-  let component: TheadListComponent;
-  let fixture: ComponentFixture<TheadListComponent>;
+describe('ThreadListComponent', () => {
+  let component: ThreadListComponent;
+  let fixture: ComponentFixture<ThreadListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TheadListComponent ]
+      declarations: [ ThreadListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TheadListComponent);
+    fixture = TestBed.createComponent(ThreadListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

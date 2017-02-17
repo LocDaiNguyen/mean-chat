@@ -23,7 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { AlertComponent } from './alert/alert.component';
 import { UserSelectionComponent } from './user-selection/user-selection.component';
 import { ThreadSectionComponent } from './thread-section/thread-section.component';
-import { TheadListComponent } from './thead-list/thead-list.component';
+import { ThreadListComponent } from './thread-list/thread-list.component';
 import { MessageSectionComponent } from './message-section/message-section.component';
 import { MessageListComponent } from './message-list/message-list.component';
 
@@ -52,7 +52,7 @@ export function storeReducer(state: ApplicationState, action: Action): Applicati
     AlertComponent,
     UserSelectionComponent,
     ThreadSectionComponent,
-    TheadListComponent,
+    ThreadListComponent,
     MessageSectionComponent,
     MessageListComponent,
   ],
